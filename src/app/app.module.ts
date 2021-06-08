@@ -48,7 +48,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import { HomepageComponent } from './homepage/homepage.component';
 
 //divider
-import {MatDividerModule} from '@angular/material/divider'; 
+import {MatDividerModule} from '@angular/material/divider';
+import { FaqComponent } from './faq/faq.component'; 
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import {MatDividerModule} from '@angular/material/divider';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomepageComponent
+    HomepageComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
