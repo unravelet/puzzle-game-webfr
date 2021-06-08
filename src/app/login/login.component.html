@@ -1,0 +1,29 @@
+<div id="loginForm">
+    <h2>Login</h2>
+    <mat-card>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput placeholder="pat@example.com" formControlName="email">
+                    <mat-error *ngIf="loginForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="password">PASSWORD</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" 
+                    [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+            
+            
+            <button mat-raised-button color="accent" type="submit">Login</button>
+        </form>
+    </mat-card>
+</div>

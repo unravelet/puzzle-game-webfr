@@ -1,0 +1,76 @@
+<div id="signupForm">
+    <h2>Sign Up</h2>
+    <mat-card>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput formControlName="email" placeholder="pat@example.com" required>
+                    <mat-error *ngIf="signupForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="password">PASSWORD</mat-label>
+                    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="password">REPEAT PASSWORD</mat-label>
+                    <input matInput formControlName="password2" [type]="hide ? 'password' : 'text'" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="company">COMPANY (disabled)</mat-label>
+                    <input matInput formControlName="company" type="text" readonly="readonly">
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="address">ADDRESS</mat-label>
+                    <textarea matInput formControlName="address" ></textarea>
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="city">CITY</mat-label>
+                    <input matInput formControlName="city" type="text" name="city" >
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input">
+                <mat-form-field appearance="legacy">
+                    <mat-label name="postalcode">POSTAL CODE</mat-label>
+                    <input matInput formControlName="postalcode" #postalCode maxlength="5" placeholder="Ex. 94105">
+                    <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                    <mat-error *ngIf="">.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="accent" type="submit">Sign Up</button>
+        </form>
+    </mat-card>
+</div>
+
+
+
+  
+

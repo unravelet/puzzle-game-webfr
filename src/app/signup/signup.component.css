@@ -1,0 +1,23 @@
+signup {
+    display: flex;
+    align-items: center;
+}
+#signupForm{
+    border: 1px solid rgb(144, 93, 211);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+mat-form-field {
+    width: 100%;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.input{
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

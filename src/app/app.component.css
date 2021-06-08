@@ -1,0 +1,17 @@
+
+.navbar{
+    background-color: rgba(245, 245, 245, 0.938);
+    border-radius: 10px;
+    border: 1px solid rgb(196, 0, 81);
+    position: relative;
+    padding: 4px;
+    text-align: center;
+}
+
+.navbar a {
+    font-size: 23px;
+    margin: auto;
+}
+mat-toolbar{
+    background-color: rgba(245, 245, 245, 0.938);
+}
