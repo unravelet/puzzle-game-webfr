@@ -85,4 +85,5 @@ import { CookieService } from 'ngx-cookie-service';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
