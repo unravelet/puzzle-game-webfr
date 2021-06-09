@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 //-----------components--------------
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { FaqComponent } from './faq/faq.component';
 
 //-----mat-form---------------
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -45,11 +48,11 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { HomepageComponent } from './homepage/homepage.component';
 
 //divider
 import {MatDividerModule} from '@angular/material/divider';
-import { FaqComponent } from './faq/faq.component'; 
+
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -77,7 +80,9 @@ import { FaqComponent } from './faq/faq.component';
     MatProgressSpinnerModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
